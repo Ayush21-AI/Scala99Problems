@@ -1,0 +1,8 @@
+[debug] Waiting for threads to exit or System.exit to be called.
+[debug] Getting org.scala-sbt:compiler-bridge_2.13:1.5.7:compile for Scala 2.13.6
+[debug] Waiting for thread run-main-0 to terminate.
+[debug] Getting org.scala-sbt:compiler-bridge_2.13:1.5.7:compile for Scala 2.13.6
+[info] Starting scala interpreter...
+[warn] Run canceled.
+[debug] Interrupting thread run-main-0
+[debug] 	Interrupted run-main-0
