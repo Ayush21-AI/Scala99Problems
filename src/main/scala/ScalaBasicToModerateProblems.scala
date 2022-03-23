@@ -1,31 +1,35 @@
 import scala.annotation.tailrec
 
-object Scala99Problems extends App {
+object ScalaBasicToModerateProblems extends App {
 
- // find sum from 0 to 5  = 15 (0+1+2+3+4+5)
- def sumBetween(from:Int, to:Int): Int = {
-  @tailrec
-  def inner(from:Int, to:Int, acc:Int=0): Int = {
-   if (from == to+1) acc
-   else inner(from+1, to, acc+from)
-  }
-  inner(from, to)
- }
- println(sumBetween(from = 0, to = 5))
-
- //  Print sum of any numbers in decreasing order till 0.
- def printDecreasing(n:Int):Int =  {
+  // find sum from 0 to 5  = 15 (0+1+2+3+4+5)
+  def sumBetween(from: Int, to: Int): Int = {
     @tailrec
-    def inner(n:Int, accumulator:Int):Int = {
-     if(n<=0) accumulator
-     else inner(n-1, accumulator + n)
-     }
-    inner(n,0)
+    def inner(from: Int, to: Int, acc: Int = 0): Int = {
+      if (from == to + 1) acc
+      else inner(from + 1, to, acc + from)
+    }
+
+    inner(from, to)
+  }
+
+  println(sumBetween(from = 0, to = 5))
+
+  //  Print sum of any numbers in decreasing order till 0.
+  def printDecreasing(n: Int): Int = {
+    @tailrec
+    def inner(n: Int, accumulator: Int): Int = {
+      if (n <= 0) accumulator
+      else inner(n - 1, accumulator + n)
+    }
+
+    inner(n, 0)
  }
  println(printDecreasing(5))
 
  // Calculate the Factorial of a Number.
   def fact(n:Int):Int = {
+    @tailrec
     def inFact(n:Int, acc:Int):Int ={
       if(n<=0) acc
       else inFact(n-1, acc*n)
